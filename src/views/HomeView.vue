@@ -35,7 +35,7 @@ export default {
   methods: {
     Login(e) {
       e.preventDefault();
-      axios.post('http://localhost:3000/api/v2/login/login', {
+      axios.post(`${process.env.VUE_APP_GATE}/v2/login/login`, {
         email: this.email,
         password: this.password
       })
